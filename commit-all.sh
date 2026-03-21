@@ -21,6 +21,8 @@ git submodule foreach --quiet 'echo "$displaypath"' | while read -r sub; do
     git -C "$sub_path" add -A
     git -C "$sub_path" commit -m "$COMMIT_MSG"
     echo "    committed: $sub"
+    git -C "$sub_path" push
+    echo "    pushed: $sub"
   else
     echo "--- [$sub] clean, skipping ---"
   fi
@@ -41,4 +43,6 @@ else
 fi
 
 echo ""
-echo "Done. Run 'git push --recurse-submodules=on-demand' to push everything."
+echo "==> Pushing parent repo..."
+git push
+echo "Done."
