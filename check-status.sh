@@ -11,6 +11,11 @@ check_repo() {
         return
     fi
 
+    # Pull latest from remote
+    echo "  Pulling $name..."
+    git -C "$path" pull --ff-only 2>&1 | sed 's/^/    /'
+    echo ""
+
     local status
     status=$(git -C "$path" status --porcelain 2>/dev/null)
 
