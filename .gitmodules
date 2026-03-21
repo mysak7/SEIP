@@ -1,0 +1,30 @@
+[submodule "seip-agent-win"]
+	path = seip-agent-win
+	url = https://github.com/mysak7/seip-agent-win.git
+[submodule "seip-deep-mind"]
+	path = seip-deep-mind
+	url = https://github.com/mysak7/seip-deep-mind.git
+[submodule "seip-gui"]
+	path = seip-gui
+	url = https://github.com/mysak7/seip-gui.git
+[submodule "seip-gui-easy"]
+	path = seip-gui-easy
+	url = https://github.com/mysak7/seip-gui-easy.git
+[submodule "seip-infrastructure"]
+	path = seip-infrastructure
+	url = https://github.com/mysak7/seip-infrastructure.git
+[submodule "seip-kafka-consumer"]
+	path = seip-kafka-consumer
+	url = https://github.com/mysak7/seip-kafka-consumer.git
+[submodule "seip-maintenance"]
+	path = seip-maintenance
+	url = https://github.com/mysak7/seip-maintenance.git
+[submodule "seip-manager"]
+	path = seip-manager
+	url = https://github.com/mysak7/seip-manager.git
+[submodule "seip-money"]
+	path = seip-money
+	url = https://github.com/mysak7/seip-money.git
+[submodule "seip-orchestrator"]
+	path = seip-orchestrator
+	url = https://github.com/mysak7/seip-orchestrator.git
