@@ -11,10 +11,7 @@ check_repo() {
         return
     fi
 
-    # Pull latest from remote
-    echo "  Pulling $name..."
-    git -C "$path" pull --ff-only 2>&1 | sed 's/^/    /'
-    echo ""
+    git -C "$path" fetch --quiet 2>/dev/null
 
     local status
     status=$(git -C "$path" status --porcelain 2>/dev/null)
@@ -41,8 +38,8 @@ check_repo() {
             messages+=("  unpushed commits: $ahead commit(s) ahead of remote")
         fi
         if [ "$behind" -gt 0 ] 2>/dev/null; then
-            has_issue=1
-            messages+=("  behind remote: $behind commit(s)")
+            echo "  [$name] pulling $behind new commit(s)..."
+            git -C "$path" pull --ff-only 2>&1 | sed 's/^/    /'
         fi
     fi
 
