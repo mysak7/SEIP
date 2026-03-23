@@ -28,3 +28,6 @@
 [submodule "seip-orchestrator"]
 	path = seip-orchestrator
 	url = https://github.com/mysak7/seip-orchestrator.git
+[submodule "seip-models"]
+	path = seip-models
+	url = https://github.com/mysak7/seip-models.git
