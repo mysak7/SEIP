@@ -31,3 +31,6 @@
 [submodule "seip-models"]
 	path = seip-models
 	url = https://github.com/mysak7/seip-models.git
+[submodule "seip-mcp"]
+	path = seip-mcp
+	url = https://github.com/mysak7/seip-mcp.git
