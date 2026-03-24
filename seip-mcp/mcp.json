@@ -1,0 +1,10 @@
+{
+  "_comment": "seip-mcp runs on app-host (port 8765). Connect via SSH tunnel first:",
+  "_tunnel":  "ssh -L 8765:localhost:8765 -N <bastion-or-app-host>",
+  "mcpServers": {
+    "seip-mcp": {
+      "type": "http",
+      "url": "http://localhost:8765/mcp"
+    }
+  }
+}
