@@ -21,6 +21,7 @@ git submodule foreach --quiet 'echo "$displaypath"' | while read -r sub; do
     git -C "$sub_path" add -A
     git -C "$sub_path" commit -m "$COMMIT_MSG"
     echo "    committed: $sub"
+    git -C "$sub_path" pull --rebase
     git -C "$sub_path" push
     echo "    pushed: $sub"
   else
@@ -44,5 +45,6 @@ fi
 
 echo ""
 echo "==> Pushing parent repo..."
+git pull --rebase
 git push
 echo "Done."
